@@ -1,0 +1,85 @@
+:root {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #17202a;
+  background: #eaf6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px;
+  background-color: #eaf6ff;
+  background-image: radial-gradient(#b7ddf4 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: center;
+  gap: 24px;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 360px;
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+  background: #ffffff;
+  border: 3px solid #f4c542;
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 #2563a8;
+}
+
+.Card h1 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #1f3d7a;
+}
+
+.image {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+}
+
+.usuario {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border: 3px solid #2563a8;
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 #f4c542;
+}
+
+.usuario h1,
+.usuario h2 {
+  margin: 0;
+  color: #1f3d7a;
+}
+
+.usuario h2 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 20px;
+  }
+
+  #root {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
